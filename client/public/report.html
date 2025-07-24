@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Report an Issue</title>
+  <link rel="stylesheet" href="assets/report.css" />
+  <script src="assets/report.js"></script>
+
+</head>
+<body>
+  <header>
+    <h1>Report an Issue</h1>
+    <nav>
+      <a href="home.html">Home</a>
+
+    </nav>
+    <button id="darkToggle">🌙 Toggle Dark Mode</button>
+
+  </header>
+
+  <section class="report-form">
+    <h2>Tell us your issue ✍️</h2>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="category">Issue Category:</label>
+      <select id="category" required>
+        <option value="">-- Select Category --</option>
+        <option value="electricity">⚡ Electricity</option>
+        <option value="streetlight">💡 Street Light</option>
+        <option value="waste">🗑️ Waste Management</option>
+        <option value="pothole">🕳️ Pothole</option>
+        <option value="water">🚰 Water Management</option>
+        <option value="animal">🐕 Street Animals</option>
+        <option value="other">❓ Other</option>
+      </select>
+
+      <label for="photo">Upload Image (optional):</label>
+      <input type="file" id="photo" accept="image/*" />
+
+      <label for="issue">Describe your issue:</label>
+      <textarea id="issue" placeholder="Describe your problem here..." rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SPR Team. All rights reserved.</p>
+  </footer>
+</body>
+</html>

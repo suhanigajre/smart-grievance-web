@@ -1,0 +1,207 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Header */
+header {
+  background: #ffeef5;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #e91e63;
+  transition: color 0.5s ease;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #e91e63;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #ffeef5, #e6f7ff);
+  transition: background 0.5s ease;
+}
+
+.hero h2 {
+  font-size: 34px;
+  color: #222;
+  margin-bottom: 10px;
+  transition: color 0.5s ease;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+  transition: color 0.5s ease;
+}
+
+/* Cards Section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  background-color: #fff;
+  transition: background-color 0.5s ease;
+}
+
+.card {
+  background: #fffafc;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: #e91e63;
+  transition: color 0.5s ease;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+  transition: color 0.5s ease;
+}
+
+.card p {
+  color: #666;
+  font-size: 15px;
+  transition: color 0.5s ease;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #f3f3f3;
+  padding: 18px;
+  font-size: 14px;
+  color: #888;
+  margin-top: 40px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #1b1b1d;
+  color: #eaeaea;
+}
+
+.dark-mode header {
+  background-color: #2a2a2e;
+}
+
+.dark-mode header h1 {
+  color: #ff5c8d;
+}
+
+.dark-mode nav a {
+  color: #d9d9d9;
+}
+
+.dark-mode .hero {
+  background: linear-gradient(to right, #2a2a2e, #3a3a3f);
+}
+
+.dark-mode .hero h2,
+.dark-mode .hero p {
+  color: #f1f1f1;
+}
+
+.dark-mode .cards {
+  background-color: #222;
+}
+
+.dark-mode .card {
+  background-color: #2e2e2e;
+}
+
+.dark-mode .card h3,
+.dark-mode .card p {
+  color: #f0f0f0;
+}
+
+.dark-mode .card-icon {
+  color: #ff5c8d;
+}
+
+.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #aaa;
+}
+
+/* Dark mode toggle button */
+#darkToggle {
+  margin-left: auto;
+  padding: 6px 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.dark-mode #darkToggle {
+  background-color: #444;
+  color: white;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #222;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
