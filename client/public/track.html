@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Track Complaint</title>
+  <link rel="stylesheet" href="assets/track.css" />
+</head>
+<body>
+  <header>
+    <h1>Track Your Complaint</h1>
+    <nav><a href="home.html">Home</a></nav>
+    <button id="darkToggle">🌙 Toggle Dark Mode</button>
+  </header>
+
+  <main class="track-section">
+    <h2>🔍 Enter Complaint ID</h2>
+    <form id="trackForm">
+      <input type="text" id="complaintId" placeholder="e.g. SPR12345" required />
+      <button type="submit">Track</button>
+    </form>
+
+    <p class="alt-track">Forgot Complaint ID? <a href="email.html" id="toggleAlt">Track using Email or Mobile</a></p>
+
+    <form id="altForm" style="display: none;">
+      <input type="email" id="email" placeholder="Your Email" />
+      <input type="tel" id="mobile" placeholder="Mobile Number" />
+      <button type="submit">Find Complaint</button>
+    </form>
+
+    <div class="status-tracker" id="statusTracker">
+      <h3>Status Progress</h3>
+      <div class="timeline">
+        <span class="step completed">Submitted</span>
+        <span class="step current">In Review</span>
+        <span class="step">Processing</span>
+        <span class="step">Resolved</span>
+      </div>
+    </div>
+
+    <div class="complaint-card" id="complaintCard">
+      <h3>Complaint Details</h3>
+      <p><strong>Category:</strong> Electricity Issue</p>
+      <p><strong>Message:</strong> Streetlight not working</p>
+      <p><strong>Department:</strong> Municipal Electrical Dept</p>
+      <p><strong>Officer:</strong> Mr. S. Deshmukh</p>
+      <p><strong>Expected Resolution:</strong> 5 Aug 2025</p>
+    </div>
+
+    <div class="feedback-box" id="feedbackBox">
+      <h3>📝 Feedback</h3>
+      <textarea placeholder="How was your complaint handled?" rows="4"></textarea><br>
+      <button>Submit Feedback</button>
+    </div>
+
+    <div class="notify">
+      <label><input type="checkbox" /> Notify me by email on status update</label>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SPR Team. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,3 +1,4 @@
+/* GLOBAL RESETS */
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +6,14 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* BASE BODY */
 body {
   background-color: #f1f1f1;
   color: #222;
   transition: background-color 0.4s, color 0.4s;
 }
 
+/* HEADER */
 header {
   background-color: #005f73;
   color: white;
@@ -37,7 +40,7 @@ header h1 {
   background-color: #bbb;
 }
 
-/* Login Section */
+/* LOGIN SECTION */
 .login-form {
   max-width: 450px;
   margin: 50px auto;
@@ -46,6 +49,7 @@ header h1 {
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, color 0.3s;
+  position: relative;
 }
 
 .login-form h2 {
@@ -70,11 +74,23 @@ header h1 {
   transition: border 0.3s;
 }
 
+/* Add space for eye icon */
+#password + span {
+  position: absolute;
+  right: 40px;
+  top: 56%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #555;
+  z-index: 2;
+}
+
 .login-form input:focus {
   outline: none;
   border: 2px solid #e91e63;
 }
 
+/* SUBMIT BUTTON */
 .login-form button {
   width: 100%;
   margin-top: 20px;
@@ -86,13 +102,15 @@ header h1 {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .login-form button:hover {
   background-color: #d61c5a;
+  transform: scale(1.02);
 }
 
+/* Hint / Register Link */
 .hint {
   margin-top: 15px;
   text-align: center;
@@ -109,7 +127,29 @@ header h1 {
   text-decoration: underline;
 }
 
-/* Footer */
+/* TOAST NOTIFICATION */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #222;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -119,7 +159,7 @@ footer {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* DARK MODE */
+/* DARK MODE STYLES */
 body.dark-mode {
   background-color: #121212;
   color: #f5f5f5;
@@ -163,4 +203,28 @@ body.dark-mode .login-form button:hover {
 body.dark-mode footer {
   background-color: #1a1a1a;
   color: #aaa;
+}
+
+body.dark-mode .toast {
+  background: #333;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .login-form {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  #password + span {
+    right: 20px;
+  }
+
+  .toast {
+    right: 15px;
+    bottom: 15px;
+    font-size: 13px;
+  }
 }

@@ -52,6 +52,23 @@ darkToggle.addEventListener("click", () => {
   darkToggle.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
 });
 
+// Show Logout button if user is logged in
+const logoutBtn = document.getElementById("logoutBtn");
+const currentUser = localStorage.getItem("currentUser");
+
+if (currentUser) {
+  logoutBtn.style.display = "inline-block";
+} else {
+  logoutBtn.style.display = "none";
+}
+
+// Logout handler
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("currentUser");
+  alert("You have been logged out.");
+  window.location.href = "login.html";
+});
+
 // On load: apply dark mode + animations
 window.onload = () => {
   // Apply saved dark mode
