@@ -175,7 +175,6 @@ footer {
   color: #aaa;
 }
 
-/* Dark mode toggle button */
 #darkToggle {
   margin-left: auto;
   padding: 6px 10px;
@@ -191,7 +190,6 @@ footer {
   color: white;
 }
 
-/* Back to Top Button */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -204,4 +202,80 @@ footer {
   cursor: pointer;
   display: none;
   z-index: 1000;
+}
+
+/* User Profile */
+.profile-container {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.profile-card {
+  display: inline-block;
+  background-color: #ffeef5;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: scale(1.03);
+}
+
+.profile-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e91e63;
+}
+#userProfile {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+#logoutBtn {
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#logoutBtn:hover {
+  background-color: #e53935;
+}
+.profile-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+#userProfile {
+  font-weight: bold;
+  color: #333;
+}
+
+#logoutBtn {
+  padding: 5px 12px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#logoutBtn:hover {
+  background-color: darkred;
 }
