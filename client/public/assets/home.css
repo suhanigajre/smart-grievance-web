@@ -6,16 +6,16 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #fdfdfd;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  background: #F7F9FC;
+  color: #2E2E2E;
   line-height: 1.6;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* Header */
 header {
-  background: #ffeef5;
+  background: #E3F2FD;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -27,7 +27,7 @@ header {
 
 header h1 {
   font-size: 24px;
-  color: #e91e63;
+  color: #FF6F61;
   transition: color 0.5s ease;
 }
 
@@ -47,7 +47,7 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(to right, #ffeef5, #e6f7ff);
+  background: linear-gradient(to right, #FFF9F0, #E0F7FA);
   transition: background 0.5s ease;
 }
 
@@ -75,14 +75,15 @@ nav a:hover {
 }
 
 .card {
-  background: #fffafc;
+  background: #FFFFFF;
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
   opacity: 0;
   transform: translateY(40px);
+  border-left: 6px solid #6BCB77;
 }
 
 .card.show {
@@ -92,13 +93,13 @@ nav a:hover {
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card-icon {
   font-size: 38px;
   margin-bottom: 10px;
-  color: #e91e63;
+  color: #FF6F61;
   transition: color 0.5s ease;
 }
 
@@ -154,11 +155,13 @@ footer {
 }
 
 .dark-mode .cards {
-  background-color: #222;
+  background-color: #1b1b1d;
 }
 
 .dark-mode .card {
-  background-color: #2e2e2e;
+  background-color: #2b2b2f;
+  border-left: 6px solid #6BCB77;
+  color: #f0f0f0;
 }
 
 .dark-mode .card h3,
@@ -167,7 +170,7 @@ footer {
 }
 
 .dark-mode .card-icon {
-  color: #ff5c8d;
+  color: #6BCB77;
 }
 
 .dark-mode footer {
@@ -175,33 +178,38 @@ footer {
   color: #aaa;
 }
 
-#darkToggle {
-  margin-left: auto;
-  padding: 6px 10px;
-  background-color: #ddd;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.4s;
+.dark-mode .profile-card {
+  background-color: #2e2e33;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
 }
 
-.dark-mode #darkToggle {
-  background-color: #444;
+.dark-mode .profile-name {
+  color: #ff5c8d;
+}
+
+.dark-mode #logoutBtn {
+  background-color: #ff5c8d;
   color: white;
 }
 
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #222;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 50%;
-  font-size: 20px;
+.dark-mode #logoutBtn:hover {
+  background-color: #e0527e;
+}
+
+/* ✅ Dark Mode Toggle Button – Updated Style */
+.dark-toggle-btn {
+  background-color: #4b4b4b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
   cursor: pointer;
-  display: none;
-  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.dark-toggle-btn:hover {
+  background-color: #2f2f2f;
 }
 
 /* User Profile */
@@ -235,10 +243,12 @@ footer {
   font-weight: bold;
   color: #e91e63;
 }
+
 #userProfile {
   font-size: 1.1rem;
   margin-top: 10px;
   color: #333;
+  font-weight: bold;
 }
 
 #logoutBtn {
@@ -255,6 +265,7 @@ footer {
 #logoutBtn:hover {
   background-color: #e53935;
 }
+
 .profile-actions {
   display: flex;
   align-items: center;
@@ -262,20 +273,9 @@ footer {
   margin-left: auto;
 }
 
-#userProfile {
-  font-weight: bold;
-  color: #333;
-}
-
-#logoutBtn {
-  padding: 5px 12px;
-  background-color: crimson;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-#logoutBtn:hover {
-  background-color: darkred;
+.cards a {
+  text-decoration: none;
+  color: inherit;
+  border-radius: 15px;
+  overflow: hidden;
 }

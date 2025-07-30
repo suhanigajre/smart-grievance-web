@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support - SPR Portal</title>
+  <link rel="stylesheet" href="assets/support.css" />
+</head>
+<body>
+  <header>
+    <h1>🛠️ Support Center</h1>
+    <nav> 
+      <a href="home.html">Home</a>
+    </nav>
+    <button id="darkToggle">🌙 Toggle Dark Mode</button>
+  </header>
+
+  <main>
+    <section class="support-info">
+      <h2>How can we help you?</h2>
+      <p>Browse FAQs or contact our support team directly.</p>
+    </section>
+
+    <section class="faq-section">
+      <h3>📌 Frequently Asked Questions</h3>
+      <details>
+        <summary>How do I track my complaint?</summary>
+        <p>Use the <a href="track.html">Track</a> page and enter your Complaint ID or registered Email/Mobile.</p>
+      </details>
+      <details>
+        <summary>Can I submit anonymous complaints?</summary>
+        <p>Yes, but we recommend entering contact details to receive resolution updates.</p>
+      </details>
+      <details>
+        <summary>How long does it take to resolve an issue?</summary>
+        <p>Most issues are resolved within 3-5 working days depending on the department.</p>
+      </details>
+    </section>
+
+    <section class="contact-support">
+      <h3>📞 Contact Support Team</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Describe your issue here..." rows="5" required></textarea>
+        <button type="submit">Send Request</button>
+      </form>
+    </section>
+
+    <section class="live-chat-section">
+  <h2>💬Live Chat Support</h2>
+  <p>If you need immediate assistance, start a chat with our support team.</p>
+  <button id="startChatBtn">Start Chat</button>
+  <div id="chatBox" style="display: none;">
+    <p><strong>Support:</strong> Hello! How can we help you?</p>
+    <textarea placeholder="Type your message..."></textarea>
+    <button id="sendMessage">Send</button>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 SPR Team. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("darkToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>
